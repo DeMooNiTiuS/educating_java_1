@@ -14,5 +14,6 @@ public class task1639 {
         int result = (m * n) % 2;
 
         out.println((result !=0) ? ("[second]=:") : (":=[first]"));
+        out.flush();
     }
 }

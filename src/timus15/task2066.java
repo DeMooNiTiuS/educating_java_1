@@ -13,7 +13,7 @@ public class task2066 {
         if(b == 0 || b == 1 || c == 1){
             System.out.println(a - b - c);
         } else {
-            System.out.println(a - b + c);
+            System.out.println(a - b * c);
         }
     }
 }

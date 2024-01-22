@@ -4,14 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class task1313 {
     public static void main(String[] args) {
         String inputFileName = "src/timus15/input1313.txt";
         boolean oj = System.getProperty("ONLINE_JUDGE") !=null;
-
-        int couple =2;
 
         try {
             BufferedReader bufferedReader =
