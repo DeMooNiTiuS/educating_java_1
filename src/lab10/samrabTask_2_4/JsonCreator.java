@@ -1,4 +1,4 @@
-package lab10.samrabEx2;
+package lab10.samrabTask_2_4;
 
 import java.io.FileWriter;
 import org.json.simple.JSONArray;
@@ -24,7 +24,7 @@ public class JsonCreator {
 
         library.put("books", books);
 
-        try (FileWriter file = new FileWriter("src/lab10/samrabEx2/example-json.json")) {
+        try (FileWriter file = new FileWriter("src/lab10/samrabTask_2_4/books-json.json")) {
             file.write(library.toJSONString());
             System.out.println("Json-файл успешно создан");
         } catch (Exception e) {

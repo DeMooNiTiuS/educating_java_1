@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productList>
+    <product>
+        <name>Молоко</name>
+        <type>1 л.</type>
+        <quantity>3 шт.</quantity>
+    </product>
+    <product>
+        <name>Яблоки</name>
+        <type>1 кг.</type>
+        <quantity>1 шт.</quantity>
+    </product>
+    <product>
+        <name>Печенье</name>
+        <type>300 гр.</type>
+        <quantity>2 шт.</quantity>
+    </product>
+</productList>
