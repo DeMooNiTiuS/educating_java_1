@@ -17,6 +17,7 @@ public class JsonParser {
 
         while (true) {
             System.out.println("""
+                    Json Parser v3.0
                     Выберите действие:
                     1. Показать список книг
                     2. Поиск книг по автору
@@ -100,7 +101,7 @@ public class JsonParser {
                     System.out.println("Книги данного автора не найдены.");
                 }
             } else {
-                System.out.println("Ошибка: структура данных некорректна.");
+                System.out.println("Ошибка: структура данных нарушена.");
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
@@ -135,7 +136,7 @@ public class JsonParser {
             fileWriter.flush();
             fileWriter.close();
 
-            System.out.println("Книга успешно добавлена в массив.");
+            System.out.println("Книга успешно добавлена.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -169,7 +170,7 @@ public class JsonParser {
                 fileWriter.write(jsonObject.toJSONString());
                 fileWriter.flush();
                 fileWriter.close();
-                System.out.println("Книга успешно удалена из массива.");
+                System.out.println("Книга успешно удалена.");
             } else {
                 System.out.println("Книга с таким названием не найдена.");
             }
