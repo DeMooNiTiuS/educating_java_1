@@ -3,20 +3,19 @@ package lab11;
 import java.util.ArrayList;
 import java.util.List;
 
-public class samTask5 {
+public class samTask9 {
     public static void main(String[] args) {
-        String string = "Напишите функцию, Которая принимает на вход список "
+        String string = "9. Напишите функцию, Которая принимает на вход список "
                 +"строк и возвращает новый список. Содержащий только те строки, "
-                +"которые содержат заданную подстроку.";
+                +"которые содержат только буквы (без цифр и символов).";
         List<String> strings = List.of(string.split(" "));
+
         System.out.println("\n" + "Строка после сплитования: " + "\n");
         for (String e : strings) {
             System.out.println(e);
         }
 
-        String substring = "ок";
-
-        List<String> stringsAfter = filterSubstring(strings, substring);
+        List<String> stringsAfter = filterWordsStrings(strings);
 
         System.out.println("\n" + "Строка после преобразования: " + "\n");
         for (String e : stringsAfter) {
@@ -24,13 +23,13 @@ public class samTask5 {
         }
     }
 
-    public static List<String> filterSubstring (List<String> list, String subStr) {
-        List<String> foundStr = new ArrayList<>();
+    public static List<String> filterWordsStrings (List<String> list) {
+        List<String> lettersOnlyString = new ArrayList<>();
         for (String string : list) {
-            if (string.contains(subStr)) {
-                foundStr.add(string);
+            if (string.matches("[а-яА-Я]+")) {
+                lettersOnlyString.add(string);
             }
         }
-        return foundStr;
+        return lettersOnlyString;
     }
 }

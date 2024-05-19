@@ -1,22 +1,22 @@
 package lab11;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
-public class samTask5 {
+public class samTask7 {
     public static void main(String[] args) {
         String string = "Напишите функцию, Которая принимает на вход список "
                 +"строк и возвращает новый список. Содержащий только те строки, "
-                +"которые содержат заданную подстроку.";
+                +"которые имеют длину больше заданного значения.";
         List<String> strings = List.of(string.split(" "));
+        int minLen = 9;
+
         System.out.println("\n" + "Строка после сплитования: " + "\n");
         for (String e : strings) {
             System.out.println(e);
         }
 
-        String substring = "ок";
-
-        List<String> stringsAfter = filterSubstring(strings, substring);
+        List<String> stringsAfter = filterLengthStrings(strings, minLen);
 
         System.out.println("\n" + "Строка после преобразования: " + "\n");
         for (String e : stringsAfter) {
@@ -24,13 +24,9 @@ public class samTask5 {
         }
     }
 
-    public static List<String> filterSubstring (List<String> list, String subStr) {
-        List<String> foundStr = new ArrayList<>();
-        for (String string : list) {
-            if (string.contains(subStr)) {
-                foundStr.add(string);
-            }
-        }
-        return foundStr;
+    public static List<String> filterLengthStrings (List<String> list, int minLen) {
+        return list.stream()
+                .filter(s -> s.length() > minLen)
+                .toList();
     }
 }
