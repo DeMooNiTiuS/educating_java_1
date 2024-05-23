@@ -19,7 +19,7 @@ public class example4 {
 
         List<Integer> integersAfter = squareList(integers);
 
-        System.out.println("\n" + "Список посел возведения в квадрат: " + "\n");
+        System.out.println("\n" + "Список после возведения в квадрат: " + "\n");
         for (Integer i : integersAfter) {
             System.out.println(i);
         }

@@ -1,6 +1,5 @@
 package lab11;
 
-
 import java.util.List;
 
 public class samTask7 {
